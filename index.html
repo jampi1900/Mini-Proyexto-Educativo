@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {
+            margin: 0px;
+            padding: 0px;
+       }
+
+        .conteiner {
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            width: 400px;
+            height: auto;
+        }
+
+        
+        .box {
+            display: inline-block;
+            background-color: rgb(199, 230, 241);
+            padding-bottom: 30px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        @media screen and (max-width: 600px) {
+        .conteiner {
+            width: 70%;
+        }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1200px) {
+            .conteiner {
+                width: 90%;
+                width: 670px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1800px) {
+            .conteiner {
+            
+                width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+
+
+
+        /* Estilos base para los botones */
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos para el botón 'SI!!!' */
+        .btn-yes {
+            background-color: #28a745;
+            width: 100%; /* Ancho constante */
+           
+        }
+
+        /* Estilos para el botón 'No' */
+        .btn-no {
+            background-color: #dc3545;
+            width: 100%; /* Ancho constante */
+        }
+
+        /* Estilos al pasar el ratón por encima */
+        .btn:hover {
+            filter: brightness(1.2);
+        }
+
+        
+        .box-1 {
+            display: inline-block;
+            gap: 10px;
+            
+        }
+
+        .none{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="box">
+            <img id="imagen_1" src="https://media.tenor.com/W_GgSsF7x9sAAAAi/amumu-sad.gif" alt="">
+            <img id="imagen_2"class="none" src="https://media.tenor.com/CIIxVCiUbAIAAAAi/maestria.gif" alt="">
+            <h1 class="titulo">¿Jugamos Pollo?</h1>
+
+
+            <div class="box-1">
+                
+                <iframe id="video" class="none" width="350" height="300" src="https://www.youtube.com/embed/-USgpvI2WvM?autoplay=1" frameborder="0"  allowfullscreen></iframe>
+
+                <button class="btn btn-yes">SI!!!</button>
+                
+                <button class="btn btn-no">No</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const no = document.querySelector(".btn-no");
+    const si = document.querySelector(".btn-yes");
+    let cont = 1;
+
+    no.addEventListener("click", function() {
+   // Incrementar el tamaño del padding superior e inferior
+    let paddingTop = parseInt(si.style.paddingTop || 10) + 10;
+    let paddingBottom = parseInt(si.style.paddingBottom || 10) + 10;
+
+    si.style.paddingTop = paddingTop + "px";
+    si.style.paddingBottom = paddingBottom + "px";
+ 
+
+
+    switch (cont) {
+    case 1:
+        no.textContent = "Pollo ya sabía que eras gey";
+        break;
+    case 2:
+        no.textContent = "Pollo ¿estás seguro?";
+        break;
+    case 3:
+        no.textContent = "Pollo nooooo";
+        break;
+    case 4:
+        no.textContent = "PUTO";
+        break;
+    case 5:
+        no.textContent = "¡Deja de darle click!!";
+        break;
+    case 6:
+        no.textContent = "¿Te gusta tocar el botón, eh?";
+        break;
+    case 7:
+        no.textContent = "¿Crees que algo cambiará si sigues clickeando?";
+        break;
+    case 8:
+        no.textContent = "Estás obsesionado con este botón.";
+        break;
+    case 9:
+        no.textContent = "Tienes que dejarlo, Pollo.";
+        break;
+    case 10:
+        no.textContent = "El botón no es mágico, Pollo.";
+        break;
+    case 11:
+        no.textContent = "No hay nada más que ver aquí.";
+        break;
+    case 12:
+        no.textContent = "Tal vez deberías hacer otra cosa.";
+        break;
+    case 13:
+        no.textContent = "¿Por qué no te tomas un descanso?";
+        break;
+    case 14:
+        no.textContent = "¡Es suficiente, Pollo!";
+        break;
+    case 15:
+        no.textContent = "¡Para, Pollo, para!";
+        break;
+    case 16:
+        no.textContent = "¿Cuántas veces necesitas clickear?";
+        break;
+    case 17:
+        no.textContent = "¡Deja de tocar este botón!";
+        break;
+    case 18:
+        no.textContent = "Esto ya no es divertido, Pollo.";
+        break;
+    case 19:
+        no.textContent = "¡No hay nada nuevo que descubrir!";
+        break;
+    case 20:
+        no.textContent = "Ya he visto suficiente, Pollo.";
+        break;
+    default:
+        no.textContent = "¡Deja de darle click!!";
+        break;
+}
+
+        cont++;
+    });
+
+
+    si.addEventListener("click",function(){
+        const titulo = document.querySelector('.titulo');
+        const imagen_1 = document.querySelector('#imagen_1');
+        const imagen_2 = document.querySelector('#imagen_2');
+        const video = document.querySelector('#video');
+
+         // Cambiar el contenido del elemento h1
+         titulo.textContent = 'GOGOGOGOGOGGOG';
+
+        si.classList.add("none");
+        no.classList.add("none");
+        imagen_1.classList.add("none");
+        imagen_2.classList.remove("none");
+        video.classList.remove("none");
+       
+        video.setAttribute("allow", "autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+
+
+
+
+    });
+
+
+
+   
+
+
+
+
+
+
+</script>
+
